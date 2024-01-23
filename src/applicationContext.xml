@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		
+	<!-- Integrated properties file for LoginBean.java file -->
+	<!-- For multiple properties file repeat below same process -->
+	<context:property-placeholder location="classpath:login.properties"/>
+
+	<!-- ========================================================================== -->
+	<!-- com.core.annotation package code -->
+	<!-- Annotation program base package component -->
+		<context:component-scan base-package="com.core.annotation"/>
+		<context:annotation-config/>
+	
+	<!-- ========================================================================== -->
+	<!-- com.practice student.java package code -->	
+		<context:component-scan base-package="com.practice"/>
+		<context:annotation-config/>
+	
+	<!-- ========================================================================== -->
+	<!-- com.core	package code -->
+	<!-- Create a bean -->
+	<bean id="hello" class="com.core.HelloWorld">		<!-- HelloWorld hello = new HelloWorld -->
+		<property name="message" value="Welcome to Spring" />	<!-- Invokes setter methods of the class to inject the value -->
+		
+	</bean>
+	
+	<!-- ========================================================================== -->
+	<!-- com.core.external	package code -->
+	<!-- Create a bean for MasterCard -->
+	<bean id="mc" class="com.core.external.MasterCard"/>
+	<bean id="vc" class="com.core.external.VisaCard"/>
+	
+	<bean id="payment" class="com.core.external.Payment">
+		<property name="card" ref="mc"/>	<!-- External bean is injected -->		
+	</bean>
+	
+	<bean id="payment1" class="com.core.external.Payment">
+		<property name="card" ref="vc"/>	<!-- External bean is injected -->		
+	</bean>
+	
+	
+	
+	<!-- ========================================================================== -->
+	<!-- com.core.internal	package code -->
+	<bean id="per" class="com.core.internal.Person">
+		<property name="personId" value="1"/>
+		<property name="personName" value="Rushi"/>
+		<property name="addr">		<!-- Internal injection of bean -->
+			<bean class="com.core.internal.Address">
+				<property name="city" value="Pune"/>
+				<property name="state" value="Maharashtra"/>
+			</bean>
+		</property>
+	</bean>	
+	
+	<!-- ========================================================================== -->
+
+	<!-- First search for the path of properties file then injecting values for username and password -->
+	<!-- To read the data from file give value as ${...} -->
+	<bean id="login" class="com.bean.properties.LoginBean">
+		<property name="username" value="${login.username}"/>
+		<property name="password" value="${login.password}"/>
+	</bean>
+
+	<!-- ========================================================================== -->
+	<!--ResourceInjection Program context code-->
+	
+	<bean id="res" class="com.core.resource.ResourceInjection">
+		<property name="file" value="Freshers.txt"/>
+		
+	</bean>
+	
+	
+	<!-- ========================================================================== -->
+	
+	
+	
+
+
+</beans>

@@ -1,0 +1,68 @@
+	font-family	-- Arial
+			-- Times New Roman
+
+	font-size	-- 
+--------------------------------------------------------------------------------
+		Freshers CV
+ 	      ---------------
+	- File is always in .doc format
+	- professional ID size photo (white & Blue shirt)
+	- Name (As per Adhar)
+	- Mobile no.(icon) with country code	+91 84 467 022 31
+	- Email ID (icon)	standard- ( rushikesh.dudhane_2001@gmail.com )
+
+	
+	-technical skills --(tabular format)
+
+
+---------------------------------------------------------------------------------
+
+
+	//Header
+
+		(Title) Fresher - Java
+
+	Photo		Name
+			Mob.No
+			Email-id
+
+	Professional Summary :
+		hands-on  ---- core java / J2EE / Hibernate / spring / springboot / React js /...
+		familier with DS (Serching, sorting)
+		Exposure tools  --- Git, Github, Postman 
+		Competent in problem solving / good problem solver / problem solving capability (1 Technical and 1 management skill)
+		cross-culture environment 
+		//Domain experties  --(for experienced person)-- e-commerce / BFSI / Telecom
+		//Domain Certification - 
+		Technology / language certification -
+		mentoring / team player / leadership skill
+		//Integration / REST API	-(for freshers / experienced)
+		versatile
+		//client interaction - Requirement gathering / view / POC (proof of concept)
+		
+		
+	Technical skills :
+		//tabular format
+		
+	Academics :
+		//BTech --- Diploma --- 10th
+
+	Project :
+		//title
+		//synopsis	--(Minimum 4 lines about the project - what it contains & flow...)
+		//role play	--(designing the UI , component (framework concept) , coding , debuging , testing)
+		
+	Personal Information :
+		DOB 
+		Pan no. 
+		Adhar No.
+		Passport No.
+		Address 
+		
+
+
+
+
+
+
+
